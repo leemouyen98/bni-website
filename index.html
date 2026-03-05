@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henry Lee | MDRT Advisor - BNI Intro</title>
+<meta name="description" content="Henry Lee, 8x MDRT Insurance Advisor based in Malacca. Your BNI partner for business insurance, corporate solutions, motor, home, and travel insurance. Serving SMEs and families nationwide.">
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bni.henrylee.cc/">
+<meta property="og:title" content="Henry Lee | 8x MDRT Advisor - Business & SME Insurance">
+<meta property="og:description" content="Your BNI partner for business insurance, corporate solutions, motor, home, and travel. 100% referral-driven practice serving SMEs and families nationwide.">
+<meta property="og:image" content="https://bni.henrylee.cc/img/og-preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Henry Lee | 8x MDRT Advisor - Business & SME Insurance">
+<meta name="twitter:description" content="Your BNI partner for business insurance, corporate solutions, motor, home, and travel. 100% referral-driven practice serving SMEs and families nationwide.">
+<meta name="twitter:image" content="https://bni.henrylee.cc/img/og-preview.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --paper: #faf9f6;
+    --accent: #c0392b;
+    --accent-soft: #e74c3c;
+    --warm: #f5f0e8;
+    --muted: #6b7280;
+    --border: #e5e1d8;
+    --green-bg: #e8f5e9;
+    --green-text: #2e7d32;
+    --blue-bg: #e3f2fd;
+    --blue-text: #1565c0;
+    --amber-bg: #fff8e1;
+    --amber-text: #f57f17;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08), 0 16px 40px rgba(0,0,0,0.06);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250, 249, 246, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: box-shadow 0.3s;
+  }
+  .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+  .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    padding: 0.85rem 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .nav-brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem; color: var(--ink);
+    text-decoration: none; letter-spacing: -0.01em;
+  }
+  .nav-brand span { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.75rem; align-items: center; }
+  .nav-links a {
+    font-size: 0.85rem; font-weight: 500; color: var(--muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    background: var(--accent) !important; color: #fff !important;
+    padding: 0.5rem 1.1rem !important; border-radius: 6px;
+    font-weight: 600 !important; font-size: 0.82rem !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--accent-soft) !important; }
+
+  .mobile-menu-btn {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 28px; height: 20px; position: relative; flex-direction: column;
+    justify-content: space-between;
+  }
+  .mobile-menu-btn span {
+    display: block; width: 100%; height: 2px; background: var(--ink);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 8rem 1.5rem 4rem;
+    max-width: 960px; margin: 0 auto;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1fr 280px;
+    gap: 3rem; align-items: center;
+  }
+  .hero-photo {
+    width: 280px; height: 280px; border-radius: 50%;
+    object-fit: cover; object-position: center top;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    border: 4px solid #fff;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: var(--warm); border: 1px solid var(--border);
+    padding: 0.35rem 0.85rem; border-radius: 100px;
+    font-size: 0.78rem; font-weight: 600; color: var(--muted);
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-badge .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--green-text); display: inline-block;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.15; letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  .hero h1 em {
+    font-style: normal; color: var(--accent);
+    text-decoration: underline; text-decoration-color: rgba(192,57,43,0.25);
+    text-underline-offset: 4px;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem; color: var(--muted);
+    max-width: 540px; margin-bottom: 2rem;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-ctas {
+    display: flex; gap: 0.75rem; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.75rem 1.5rem; border-radius: 8px;
+    font-size: 0.9rem; font-weight: 600; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: var(--accent); color: #fff;
+  }
+  .btn-primary:hover { background: var(--accent-soft); transform: translateY(-1px); }
+  .btn-secondary {
+    background: var(--warm); color: var(--ink); border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { background: #eee8db; transform: translateY(-1px); }
+
+  /* ── TRIGGER SECTION ── */
+  .section {
+    max-width: 960px; margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    line-height: 1.2; margin-bottom: 0.75rem;
+  }
+  .section-desc {
+    color: var(--muted); font-size: 0.95rem;
+    max-width: 520px; margin-bottom: 2.5rem;
+  }
+
+  /* ── TRIGGER CARDS ── */
+  .trigger-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .trigger-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem;
+    transition: all 0.25s;
+    position: relative; overflow: hidden;
+  }
+  .trigger-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px);
+    border-color: transparent;
+  }
+  .trigger-card .hear {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted);
+    margin-bottom: 0.6rem;
+  }
+  .trigger-card .quote {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem; line-height: 1.35;
+    margin-bottom: 1rem; color: var(--ink);
+  }
+  .trigger-card .quote::before { content: '"'; color: var(--accent); }
+  .trigger-card .quote::after { content: '"'; color: var(--accent); }
+  .trigger-card .tag {
+    display: inline-block; padding: 0.25rem 0.65rem;
+    border-radius: 100px; font-size: 0.75rem; font-weight: 600;
+  }
+  .tag-fire { background: var(--amber-bg); color: var(--amber-text); }
+  .tag-group { background: var(--blue-bg); color: var(--blue-text); }
+  .tag-motor { background: var(--green-bg); color: var(--green-text); }
+  .tag-home { background: #fce4ec; color: #c62828; }
+  .tag-travel { background: #e8eaf6; color: #283593; }
+
+  /* ── FOCUS BANNER ── */
+  .focus-banner {
+    max-width: 960px; margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .focus-inner {
+    background: var(--ink); color: #fff;
+    border-radius: 16px; padding: 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 2rem; flex-wrap: wrap;
+    position: relative; overflow: hidden;
+  }
+  .focus-inner::before {
+    content: ''; position: absolute; top: -50%; right: -20%;
+    width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(192,57,43,0.15), transparent 70%);
+  }
+  .focus-text { position: relative; z-index: 1; }
+  .focus-eyebrow {
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--accent-soft);
+    margin-bottom: 0.4rem;
+  }
+  .focus-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    line-height: 1.25; margin-bottom: 0.5rem;
+  }
+  .focus-sub { color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+  .btn-white {
+    background: #fff; color: var(--ink);
+    padding: 0.75rem 1.5rem; border-radius: 8px;
+    font-weight: 600; font-size: 0.9rem;
+    text-decoration: none; display: inline-block;
+    transition: all 0.2s; position: relative; z-index: 1;
+    white-space: nowrap;
+  }
+  .btn-white:hover { background: var(--warm); transform: translateY(-1px); }
+
+  /* ── HOW TO REFER ── */
+  .script-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 2rem;
+    margin-top: 2rem;
+  }
+  .script-label {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--green-text);
+    margin-bottom: 0.75rem;
+  }
+  .script-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem; line-height: 1.5;
+    color: var(--ink); margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent);
+  }
+  .script-note {
+    font-size: 0.85rem; color: var(--muted);
+    font-style: italic;
+  }
+
+  .steps-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem; margin-top: 2rem;
+  }
+  .step {
+    text-align: center; padding: 1.5rem 1rem;
+    background: var(--warm); border-radius: 12px;
+    position: relative;
+  }
+  .step-num {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+  .step-title {
+    font-weight: 700; font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  .step-desc { font-size: 0.82rem; color: var(--muted); }
+
+  /* ── SOCIAL PROOF ── */
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .proof-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem;
+  }
+  .proof-stars { color: var(--amber-text); font-size: 0.85rem; margin-bottom: 0.6rem; letter-spacing: 2px; }
+  .proof-quote {
+    font-size: 0.95rem; line-height: 1.55;
+    margin-bottom: 1rem; color: var(--ink);
+  }
+  .proof-author { font-size: 0.82rem; color: var(--muted); }
+  .proof-author strong { color: var(--ink); font-weight: 600; }
+
+  /* ── ABOUT / CREDENTIALS ── */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2rem; align-items: start;
+  }
+  .about-text p { margin-bottom: 1rem; color: var(--muted); font-size: 0.95rem; }
+  .credential-chips {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;
+  }
+  .chip {
+    background: var(--warm); border: 1px solid var(--border);
+    padding: 0.35rem 0.85rem; border-radius: 100px;
+    font-size: 0.78rem; font-weight: 600; color: var(--ink);
+  }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .stat-box {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.25rem; text-align: center;
+  }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem; color: var(--accent); line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .stat-label { font-size: 0.78rem; color: var(--muted); font-weight: 500; }
+
+  /* ── 1-2-1 RESOURCES ── */
+  .resource-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+  }
+  .resource-link {
+    display: flex; align-items: center; gap: 0.6rem;
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 1rem 1.25rem;
+    text-decoration: none; color: var(--ink);
+    font-weight: 600; font-size: 0.88rem;
+    transition: all 0.2s;
+  }
+  .resource-link:hover {
+    border-color: var(--accent); background: #fef8f7;
+    transform: translateY(-1px);
+  }
+  .resource-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; flex-shrink: 0;
+  }
+  .ri-1 { background: var(--amber-bg); }
+  .ri-2 { background: var(--blue-bg); }
+  .ri-3 { background: var(--green-bg); }
+  .ri-4 { background: #fce4ec; }
+
+  /* ── FOOTER ── */
+  .footer {
+    max-width: 960px; margin: 0 auto;
+    padding: 3rem 1.5rem 2rem;
+    border-top: 1px solid var(--border);
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between;
+    align-items: start; flex-wrap: wrap; gap: 2rem;
+  }
+  .footer-brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem; margin-bottom: 0.4rem;
+  }
+  .footer-detail { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+  .footer-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .footer-bottom {
+    margin-top: 2rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.75rem; color: var(--muted);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .footer-bottom a { color: var(--muted); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--ink); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    max-width: 960px; margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .divider hr {
+    border: none; border-top: 1px solid var(--border);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .reveal.visible {
+    opacity: 1; transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--paper); border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem; gap: 1rem;
+    }
+    .profile-hero { grid-template-columns: 1fr; }
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-photo { width: 200px; height: 200px; margin: 0 auto 1.5rem; }
+    .hero-ctas { justify-content: center; }
+    .hero-badge { margin-left: auto; margin-right: auto; }
+    .focus-inner { flex-direction: column; text-align: center; }
+    .hero { padding-top: 6.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    .trigger-grid { grid-template-columns: 1fr; }
+    .steps-row { grid-template-columns: 1fr; }
+    .about-stats { grid-template-columns: 1fr; }
+    .resource-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Henry Lee<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#triggers">When to Refer</a>
+      <a href="#how">How to Refer</a>
+      <a href="#about">About</a>
+      <a href="#resources">Worksheets</a>
+      <a href="https://wa.me/60126123540?text=Hi%20Henry%2C%20I%27d%20like%20to%20book%20a%20BNI%201-2-1!" class="nav-cta">Book 1-2-1</a>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge"><span class="dot"></span> BNI Extreme Chapter · General Insurance</div>
+      <h1>Make your next referral look like a <em>favour</em>, not a gamble.</h1>
+      <p class="hero-sub">I'm Henry Lee — your BNI partner for business insurance, corporate solutions, motor, home, and travel insurance. Here's exactly when and how to refer me.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/60126123540?text=Hi%20Henry%2C%20I%27d%20like%20to%20book%20a%20BNI%201-2-1!" class="btn btn-primary">📅 Book a 1-2-1</a>
+        <a href="https://wa.me/60126123540?text=Hi%20Henry%2C%20I%20have%20a%20referral%20for%20you!" class="btn btn-secondary">💬 Send a Referral</a>
+        <a href="/henry-lee.vcf" class="btn btn-secondary">📲 Save Contact</a>
+      </div>
+    </div>
+    <img src="/img/henry-professional.jpg" alt="Henry Lee — MDRT Insurance Advisor" class="hero-photo">
+  </div>
+</section>
+
+
+<!-- ─── MONTHLY FOCUS (auto-rotates by calendar month) ─── -->
+<div class="focus-banner reveal">
+  <div class="focus-inner" id="monthlyFocus">
+    <!-- Content injected by JS based on current month -->
+  </div>
+</div>
+
+<!-- ─── TRIGGER PHRASES ─── -->
+<section class="section" id="triggers">
+  <div class="reveal">
+    <div class="section-label">When to Think of Henry</div>
+    <div class="section-title">Listen for these phrases</div>
+    <p class="section-desc">You don't need to understand insurance. Just notice when a client, friend, or contact says something like this — and connect us.</p>
+  </div>
+
+  <div class="trigger-grid">
+    <div class="trigger-card reveal">
+      <div class="hear">When you hear...</div>
+      <div class="quote">Our factory insurance is up for renewal</div>
+      <span class="tag tag-fire">Business Fire & Assets</span>
+    </div>
+    <div class="trigger-card reveal">
+      <div class="hear">When you hear...</div>
+      <div class="quote">We just hired new staff and need medical benefits</div>
+      <span class="tag tag-group">Group Medical / Employee</span>
+    </div>
+    <div class="trigger-card reveal">
+      <div class="hear">When you hear...</div>
+      <div class="quote">My car insurance renewal is coming up</div>
+      <span class="tag tag-motor">Motor Insurance</span>
+    </div>
+    <div class="trigger-card reveal">
+      <div class="hear">When you hear...</div>
+      <div class="quote">We just renovated the house — hope nothing goes wrong</div>
+      <span class="tag tag-home">Home / Fire / Contents</span>
+    </div>
+    <div class="trigger-card reveal">
+      <div class="hear">When you hear...</div>
+      <div class="quote">We're planning a family trip overseas next month</div>
+      <span class="tag tag-travel">Travel Insurance</span>
+    </div>
+    <div class="trigger-card reveal">
+      <div class="hear">When you hear...</div>
+      <div class="quote">I'm not sure if our business coverage is enough</div>
+      <span class="tag tag-fire">Coverage Gap Review</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ─── HOW TO REFER ─── -->
+<section class="section" id="how">
+  <div class="reveal">
+    <div class="section-label">How to Refer Me</div>
+    <div class="section-title">Just say this</div>
+    <p class="section-desc">No need to explain insurance. Use one of these scripts and I'll take it from there.</p>
+  </div>
+
+  <div class="script-card reveal">
+    <div class="script-label">✅ Copy-paste to WhatsApp</div>
+    <div class="script-text">"I have a BNI partner who handles business and personal insurance — very thorough, MDRT-level. Mind if I connect you with him on WhatsApp?"</div>
+    <div class="script-note">Works for any insurance referral. Swap "business and personal" for the specific type if you know it.</div>
+  </div>
+
+  <div class="script-card reveal">
+    <div class="script-label">✅ For group medical referrals</div>
+    <div class="script-text">"My BNI partner specialises in group medical for SMEs — he can benchmark your current plan and see if there's a better option. Want me to introduce you?"</div>
+    <div class="script-note">Best for SME owners or HR decision-makers with 5–50 staff.</div>
+  </div>
+
+  <div class="steps-row reveal">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-title">You introduce</div>
+      <div class="step-desc">Create a WhatsApp group or just forward my contact</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-title">I contact within 4 hours</div>
+      <div class="step-desc">I reach out, introduce myself, and set up a brief call</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-title">Free no-obligation review</div>
+      <div class="step-desc">I assess their situation and recommend only what's needed — no hard sell</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-title">You get a thank-you update</div>
+      <div class="step-desc">I close the loop with you so you know your referral was taken care of</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ─── TRACK RECORD ─── -->
+<section class="section">
+  <div class="reveal">
+    <div class="section-label">Track Record</div>
+    <div class="section-title">Results, not promises</div>
+  </div>
+
+  <div class="proof-grid">
+    <div class="proof-card reveal" style="text-align:center; padding:2rem;">
+      <div style="font-family:'DM Serif Display',serif; font-size:2.4rem; color:var(--accent); margin-bottom:0.25rem;">RM200K</div>
+      <div style="font-size:0.88rem; color:var(--muted); line-height:1.5;">Coverage gap found in a factory fire policy — within 48 hours of the first meeting</div>
+    </div>
+    <div class="proof-card reveal" style="text-align:center; padding:2rem;">
+      <div style="font-family:'DM Serif Display',serif; font-size:2.4rem; color:var(--accent); margin-bottom:0.25rem;">4 Hours</div>
+      <div style="font-size:0.88rem; color:var(--muted); line-height:1.5;">Average first-response time after receiving a referral</div>
+    </div>
+    <div class="proof-card reveal" style="text-align:center; padding:2rem;">
+      <div style="font-family:'DM Serif Display',serif; font-size:2.4rem; color:var(--accent); margin-bottom:0.25rem;">100%</div>
+      <div style="font-size:0.88rem; color:var(--muted); line-height:1.5;">Of recent clients came from referrals and repeat business — zero cold calls</div>
+    </div>
+  </div>
+
+  <!-- Mini P10 -->
+  <div class="reveal" style="margin-top:2rem; background:#fff; border:1px solid var(--border); border-radius:12px; padding:1.5rem 2rem;">
+    <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:1rem;">Recent Clients I've Helped</div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem;">
+      <div>
+        <div style="font-weight:700; font-size:0.9rem;">MCKILP Development Sdn Bhd</div>
+        <div style="font-size:0.78rem; color:var(--muted);">Developer · Corporate Solutions</div>
+      </div>
+      <div>
+        <div style="font-weight:700; font-size:0.9rem;">Kedai Roti Hwa Aik</div>
+        <div style="font-size:0.78rem; color:var(--muted);">Bakery · Fire + Stock-in-Transit</div>
+      </div>
+      <div>
+        <div style="font-weight:700; font-size:0.9rem;">MK Lim Motor Workshop</div>
+        <div style="font-size:0.78rem; color:var(--muted);">SME · Fire + Equipment + PA</div>
+      </div>
+      <div>
+        <div style="font-weight:700; font-size:0.9rem;">Dato Seri Chan</div>
+        <div style="font-size:0.78rem; color:var(--muted);">Frequent Traveller · Annual Travel</div>
+      </div>
+    </div>
+    <a href="/1-2-1/previous-10.html" style="display:inline-block; margin-top:1rem; font-size:0.82rem; font-weight:600; color:var(--accent); text-decoration:none;">See all 10 recent clients →</a>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ─── ABOUT ─── -->
+<section class="section" id="about">
+  <div class="reveal">
+    <div class="section-label">About Henry</div>
+    <div class="section-title">Not the cheapest quote — the right one</div>
+  </div>
+
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <p>Most people buy insurance from whoever's closest or cheapest. I take a different approach: I find out what you're actually exposed to, then structure coverage that holds up when it matters.</p>
+      <p>I started in asset management at Maybank Investment, managing over RM1.5 billion in institutional funds. That background taught me to think in risks and probabilities — which is exactly how insurance should be done.</p>
+      <p>Today I work with 6 top-tier insurers so I can match clients to the right product — not push what pays the highest commission. For BNI members, my promise is simple: your referral gets educated first, quoted second, and you stay in the loop throughout.</p>
+      <div style="display:grid; grid-template-columns:auto 1px auto; gap:1.25rem; align-items:center; margin:1.5rem 0; padding:1.25rem 1.5rem; background:var(--warm); border-radius:12px; border:1px solid var(--border);">
+        <div style="text-align:center;">
+          <img src="/img/logo-tokiomarine.png" alt="Tokio Marine" style="height:44px; width:auto; max-width:120px; object-fit:contain; margin-bottom:0.35rem;">
+          <div style="font-size:0.72rem; color:var(--muted); font-weight:600; letter-spacing:0.03em;">Principal Insurer</div>
+        </div>
+        <div style="width:1px; align-self:stretch; background:var(--border);"></div>
+        <div style="text-align:center;">
+          <img src="/img/logo-mdrt.png" alt="MDRT" style="height:44px; width:auto; max-width:180px; object-fit:contain; margin-bottom:0.35rem;">
+          <div style="font-size:0.72rem; color:var(--muted); font-weight:600; letter-spacing:0.03em;">8× Qualifier · 2018–2026</div>
+        </div>
+      </div>
+      <div class="credential-chips">
+        <span class="chip">Tokio Marine</span>
+        <span class="chip">Allianz</span>
+        <span class="chip">MSIG</span>
+        <span class="chip">Generali</span>
+        <span class="chip">RHB</span>
+        <span class="chip">Takaful</span>
+        <span class="chip" style="background:transparent; border:1px dashed var(--border); color:var(--muted);">+ more</span>
+      </div>
+    </div>
+    <div class="about-stats">
+      <div class="stat-box">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Years MDRT Qualifying</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Insurer Partners</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">48h</div>
+        <div class="stat-label">Typical Turnaround</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Referral Follow-up</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ─── 1-2-1 RESOURCES ─── -->
+<section class="section" id="resources">
+  <div class="reveal">
+    <div class="section-label">Worksheets</div>
+    <div class="section-title">Everything you need for our 1-2-1</div>
+    <p class="section-desc">Review these before we meet so we can make the most of our time together.</p>
+  </div>
+
+  <div class="resource-row reveal">
+    <a href="/1-2-1/biography.html" class="resource-link">
+      <div class="resource-icon ri-1">📄</div>
+      Biography Sheet
+    </a>
+    <a href="/1-2-1/gains-profile.html" class="resource-link">
+      <div class="resource-icon ri-2">🎯</div>
+      GAINS Profile
+    </a>
+    <a href="/1-2-1/contact-sphere.html" class="resource-link">
+      <div class="resource-icon ri-3">🔗</div>
+      Contact Sphere
+    </a>
+    <a href="/1-2-1/previous-10.html" class="resource-link">
+      <div class="resource-icon ri-4">📋</div>
+      Previous 10 Customers
+    </a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Henry Lee</div>
+      <div class="footer-detail">
+        MDRT Insurance Advisor · Tokio Marine Insurance Group<br>
+        📍 Malacca, Malaysia · Serving Nationwide<br>
+        📞 +60 12-612 3540 · 🕒 Mon–Fri 9am–5pm
+      </div>
+    </div>
+    <div class="footer-actions">
+      <a href="https://wa.me/60126123540?text=Hi%20Henry%2C%20I%27d%20like%20to%20book%20a%20BNI%201-2-1!" class="btn btn-primary">📅 Book 1-2-1</a>
+      <a href="https://wa.me/60126123540?text=Hi%20Henry%2C%20I%20have%20a%20referral%20for%20you!" class="btn btn-secondary">💬 Send Referral</a>
+      <a href="/henry-lee.vcf" class="btn btn-secondary">📲 Save Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Lee Mou Yen (MA0244914-H)</span>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  // Close mobile menu on link click
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── Monthly Focus Rotation (5 sets, cycles by calendar month) ──
+  const focuses = [
+    {
+      headline: 'SME employers with 5–50 staff<br>needing group medical coverage',
+      sub: 'Group hospitalisation, health screening, GPA, GTL — one referral, I handle the rest.',
+      msg: 'Hi%20Henry%2C%20I%20know%20an%20SME%20owner%20who%20needs%20group%20medical%20coverage.'
+    },
+    {
+      headline: 'Business owners renewing<br>fire & asset insurance',
+      sub: 'Factory, warehouse, office, stock — I compare across insurers to get the best terms and coverage.',
+      msg: 'Hi%20Henry%2C%20I%20know%20a%20business%20owner%20whose%20fire%20insurance%20is%20up%20for%20renewal.'
+    },
+    {
+      headline: 'Families or businesses needing<br>motor fleet insurance',
+      sub: 'Whether it\'s 1 car or 20 company vehicles, I handle quotes, renewals, and claims support.',
+      msg: 'Hi%20Henry%2C%20I%20know%20someone%20who%20needs%20motor%20insurance%20help.'
+    },
+    {
+      headline: 'Homeowners who just bought,<br>renovated, or moved in',
+      sub: 'Houseowner, householder, and contents coverage — structured for reinstatement cost, not market value.',
+      msg: 'Hi%20Henry%2C%20I%20know%20someone%20who%20just%20bought%20a%20house%20and%20needs%20insurance.'
+    },
+    {
+      headline: 'Anyone planning overseas travel<br>for work or leisure',
+      sub: 'Trip cancellation, medical evacuation, baggage — from weekend getaways to multi-country trips.',
+      msg: 'Hi%20Henry%2C%20I%20know%20someone%20planning%20a%20trip%20who%20needs%20travel%20insurance.'
+    }
+  ];
+  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const monthIndex = new Date().getMonth();
+  const f = focuses[monthIndex % focuses.length];
+  document.getElementById('monthlyFocus').innerHTML = `
+    <div class="focus-text">
+      <div class="focus-eyebrow">🎯 ${monthNames[monthIndex]} Focus</div>
+      <div class="focus-headline">${f.headline}</div>
+      <div class="focus-sub">${f.sub}</div>
+    </div>
+    <a href="https://wa.me/60126123540?text=${f.msg}" class="btn-white">Refer Someone →</a>
+  `;
+</script>
+
+</body>
+</html>

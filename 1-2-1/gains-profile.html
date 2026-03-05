@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAINS Profile — Henry Lee | MDRT Advisor</title>
+<meta name="description" content="Henry Lee's BNI GAINS Profile. Goals, Accomplishments, Interests, Networks, Skills.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --paper: #faf9f6;
+    --accent: #c0392b;
+    --accent-soft: #e74c3c;
+    --warm: #f5f0e8;
+    --muted: #6b7280;
+    --border: #e5e1d8;
+    --green-bg: #e8f5e9; --green-text: #2e7d32;
+    --blue-bg: #e3f2fd; --blue-text: #1565c0;
+    --amber-bg: #fff8e1; --amber-text: #f57f17;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink); background: var(--paper);
+    line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250, 249, 246, 0.92);
+    backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
+  }
+  .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+  .nav-inner {
+    max-width: 960px; margin: 0 auto; padding: 0.85rem 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .nav-brand { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+  .nav-brand span { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.75rem; align-items: center; }
+  .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta { background: var(--accent) !important; color: #fff !important; padding: 0.5rem 1.1rem !important; border-radius: 6px; font-weight: 600 !important; font-size: 0.82rem !important; }
+  .nav-cta:hover { background: var(--accent-soft) !important; }
+  .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; width: 28px; height: 20px; flex-direction: column; justify-content: space-between; }
+  .mobile-menu-btn span { display: block; width: 100%; height: 2px; background: var(--ink); border-radius: 2px; transition: all 0.3s; }
+
+  .page-header { padding: 7.5rem 1.5rem 2rem; max-width: 960px; margin: 0 auto; }
+  .breadcrumb { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.75rem; }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .page-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4.5vw, 2.8rem); line-height: 1.15; letter-spacing: -0.02em;
+  }
+  .page-sub { font-size: 1rem; color: var(--muted); margin-top: 0.5rem; max-width: 560px; }
+
+  .content { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* GAINS letter sections */
+  .gains-section {
+    margin-bottom: 2.5rem;
+    animation: fadeUp 0.5s ease both;
+  }
+  .gains-letter {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; border-radius: 10px;
+    font-family: 'DM Serif Display', serif; font-size: 1.4rem;
+    color: #fff; margin-bottom: 0.6rem; flex-shrink: 0;
+  }
+  .gl-g { background: var(--accent); }
+  .gl-a { background: var(--amber-text); }
+  .gl-i { background: #7c3aed; }
+  .gl-n { background: var(--blue-text); }
+  .gl-s { background: var(--green-text); }
+
+  .gains-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem; margin-bottom: 0.75rem;
+  }
+
+  .gains-list { list-style: none; }
+  .gains-list li {
+    padding: 0.55rem 0; border-bottom: 1px solid var(--border);
+    font-size: 0.92rem; display: flex; align-items: baseline; gap: 0.6rem;
+  }
+  .gains-list li:last-child { border-bottom: none; }
+  .gains-list li::before {
+    content: '→'; color: var(--accent); font-weight: 700; flex-shrink: 0;
+  }
+  .gains-list .cn {
+    font-size: 0.82rem; color: var(--muted); font-style: italic;
+    display: block; margin-top: 0.15rem;
+  }
+
+  .gains-card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+  }
+  .gains-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.25rem;
+    transition: all 0.2s;
+  }
+  .gains-card:hover { box-shadow: var(--card-shadow); transform: translateY(-1px); }
+  .gains-card .gc-icon { font-size: 1.3rem; margin-bottom: 0.4rem; }
+  .gains-card .gc-text { font-size: 0.88rem; color: var(--ink); line-height: 1.5; }
+
+  /* Photo */
+  .section-photo {
+    width: 100%; border-radius: 14px;
+    box-shadow: var(--card-shadow); margin: 1.5rem 0;
+    max-height: 420px; object-fit: cover;
+  }
+
+  /* Page nav */
+  .page-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);
+  }
+  .page-nav a {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.65rem 1.25rem; border-radius: 8px;
+    font-size: 0.88rem; font-weight: 600; text-decoration: none; color: var(--ink);
+    background: var(--warm); border: 1px solid var(--border); transition: all 0.2s;
+  }
+  .page-nav a:hover { background: #eee8db; transform: translateY(-1px); }
+  .page-nav .active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .page-nav .active:hover { background: var(--accent-soft); }
+
+  .footer { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; border-top: 1px solid var(--border); }
+  .footer-bottom { font-size: 0.75rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+  .footer-bottom a { color: var(--muted); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--ink); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--paper); border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem; gap: 1rem;
+    }
+    .gains-card-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">Henry Lee<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/1-2-1/biography.html">Bio</a>
+      <a href="/1-2-1/gains-profile.html" style="color:var(--ink)">GAINS</a>
+      <a href="/1-2-1/contact-sphere.html">Contact Sphere</a>
+      <a href="/1-2-1/previous-10.html">Previous 10</a>
+      <a href="https://wa.me/60126123540?text=Hi%20Henry%2C%20I%27d%20like%20to%20book%20a%20BNI%201-2-1!" class="nav-cta">Book 1-2-1</a>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="breadcrumb"><a href="/">Home</a> → Worksheets → GAINS Profile</div>
+  <h1>GAINS Profile</h1>
+  <p class="page-sub">Goals, Accomplishments, Interests, Networks, Skills — everything you need to know for our 1-2-1.</p>
+</header>
+
+<main class="content">
+
+  <!-- G — Goals -->
+  <div class="gains-section reveal">
+    <div class="gains-letter gl-g">G</div>
+    <div class="gains-title">Goals</div>
+    <ul class="gains-list">
+      <li><span>Help 30 new SME / business clients this year</span></li>
+      <li><span>Build cross-referral partnerships with SME-focused professionals</span></li>
+      <li><span>Grow general insurance income by 20%</span></li>
+      <li><span>Help families, businesses, and individuals plan insurance that truly fits</span></li>
+      <li style="color:var(--muted); font-size:0.85rem; font-style:italic; border:none; padding-top:0;"><span>帮助家庭、企业和个人，规划适合他们的保险保障</span></li>
+    </ul>
+  </div>
+
+  <!-- A — Accomplishments -->
+  <div class="gains-section reveal">
+    <div class="gains-letter gl-a">A</div>
+    <div class="gains-title">Accomplishments</div>
+    <ul class="gains-list">
+      <li><span>8× MDRT Qualifier (2018–2026)</span></li>
+      <li><span>Speaker at Malaysia MDRT Day — 4,200+ attendees</span></li>
+      <li><span>Agency-level record holder at Tokio Marine</span></li>
+      <li><span>100+ families and 60+ businesses served</span></li>
+      <li><span>Eight consecutive years qualifying for the Million Dollar Round Table</span></li>
+      <li style="color:var(--muted); font-size:0.85rem; font-style:italic; border:none; padding-top:0;"><span>连续荣获八届美国百万圆桌会员资格</span></li>
+    </ul>
+
+    <img src="/img/henry-mdrt.jpg" alt="Henry Lee MDRT achievement" class="section-photo">
+  </div>
+
+  <!-- I — Interests -->
+  <div class="gains-section reveal">
+    <div class="gains-letter" style="background:#7c3aed">I</div>
+    <div class="gains-title">Interests</div>
+    <div class="gains-card-grid">
+      <div class="gains-card">
+        <div class="gc-icon">🍷</div>
+        <div class="gc-text">Wine appreciation</div>
+      </div>
+      <div class="gains-card">
+        <div class="gc-icon">🏸</div>
+        <div class="gc-text">Badminton</div>
+      </div>
+      <div class="gains-card">
+        <div class="gc-icon">🧠</div>
+        <div class="gc-text">High-performance psychology</div>
+      </div>
+      <div class="gains-card">
+        <div class="gc-icon">🎬</div>
+        <div class="gc-text">WALL·E, Parasite, Tenet</div>
+      </div>
+      <div class="gains-card">
+        <div class="gc-icon">🌏</div>
+        <div class="gc-text">Languages & culture</div>
+      </div>
+      <div class="gains-card">
+        <div class="gc-icon">🍜</div>
+        <div class="gc-text">Restaurant hopping with Jessey — usually on referral!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- N — Networks -->
+  <div class="gains-section reveal">
+    <div class="gains-letter gl-n">N</div>
+    <div class="gains-title">Networks</div>
+    <ul class="gains-list">
+      <li><span>Over 5,000 clients across our agency team</span></li>
+      <li><span>MDRT MCC — Company Chair, Area Chair, Communications Chair</span></li>
+      <li><span>Regular speaker at industry events</span></li>
+      <li><span>Pay Fong High School centennial alumnus, Malaysia MDRT Committee member</span></li>
+      <li style="color:var(--muted); font-size:0.85rem; font-style:italic; border:none; padding-top:0;"><span>培风中学百年校友，马来西亚 MDRT 内阁成员</span></li>
+    </ul>
+
+    <img src="/img/henry-mcc.jpg" alt="Malaysia MDRT MCC 2024/2025" class="section-photo">
+  </div>
+
+  <!-- S — Skills -->
+  <div class="gains-section reveal">
+    <div class="gains-letter gl-s">S</div>
+    <div class="gains-title">Skills</div>
+    <div class="gains-card-grid">
+      <div class="gains-card">
+        <div class="gc-icon">🔍</div>
+        <div class="gc-text">Risk analysis & policy structuring</div>
+      </div>
+      <div class="gains-card">
+        <div class="gc-icon">📋</div>
+        <div class="gc-text">Underwriting strategy</div>
+      </div>
+      <div class="gains-card">
+        <div class="gc-icon">⚡</div>
+        <div class="gc-text">Fast response during claims</div>
+      </div>
+      <div class="gains-card">
+        <div class="gc-icon">💬</div>
+        <div class="gc-text">Clear explanation of complicated policies</div>
+      </div>
+    </div>
+    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--muted); font-style: italic; line-height:1.6;">专业检查和分析保单，让客户买对买够保险<br>Professional policy analysis to help clients buy right and buy enough.</p>
+  </div>
+
+  <div class="page-nav">
+    <a href="/1-2-1/biography.html">← Biography Sheet</a>
+    <a href="/1-2-1/contact-sphere.html" class="active">Next: Contact Sphere →</a>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <span>© Lee Mou Yen (MA0244914-H) · <a href="/privacy-policy.html">Privacy Policy</a></span>
+    
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

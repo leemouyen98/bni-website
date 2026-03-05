@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biography Sheet — Henry Lee | MDRT Advisor</title>
+<meta name="description" content="Henry Lee's BNI Biography Sheet. General insurance advisor, 8x MDRT qualifier, based in Malacca.">
+<!-- Open Graph / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bni.henrylee.cc/1-2-1/biography.html">
+<meta property="og:title" content="Biography Sheet — Henry Lee | MDRT Advisor">
+<meta property="og:description" content="Get to know Henry before our 1-2-1 — background, philosophy, and what drives me.">
+<meta property="og:image" content="https://bni.henrylee.cc/img/og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --paper: #faf9f6;
+    --accent: #c0392b;
+    --accent-soft: #e74c3c;
+    --warm: #f5f0e8;
+    --muted: #6b7280;
+    --border: #e5e1d8;
+    --green-bg: #e8f5e9; --green-text: #2e7d32;
+    --blue-bg: #e3f2fd; --blue-text: #1565c0;
+    --amber-bg: #fff8e1; --amber-text: #f57f17;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink); background: var(--paper);
+    line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250, 249, 246, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+  .nav-inner {
+    max-width: 960px; margin: 0 auto;
+    padding: 0.85rem 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .nav-brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem; color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-brand span { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.75rem; align-items: center; }
+  .nav-links a {
+    font-size: 0.85rem; font-weight: 500; color: var(--muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    background: var(--accent) !important; color: #fff !important;
+    padding: 0.5rem 1.1rem !important; border-radius: 6px;
+    font-weight: 600 !important; font-size: 0.82rem !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--accent-soft) !important; }
+  .mobile-menu-btn {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 28px; height: 20px; position: relative; flex-direction: column;
+    justify-content: space-between;
+  }
+  .mobile-menu-btn span {
+    display: block; width: 100%; height: 2px; background: var(--ink);
+    border-radius: 2px; transition: all 0.3s;
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    padding: 7.5rem 1.5rem 2rem;
+    max-width: 960px; margin: 0 auto;
+  }
+  .breadcrumb {
+    font-size: 0.78rem; color: var(--muted); margin-bottom: 0.75rem;
+  }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .page-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+    line-height: 1.15; letter-spacing: -0.02em;
+  }
+  .page-sub {
+    font-size: 1rem; color: var(--muted); margin-top: 0.5rem;
+    max-width: 560px;
+  }
+
+  /* ── CONTENT ── */
+  .content { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* Hero profile row */
+  .profile-hero {
+    display: grid; grid-template-columns: 280px 1fr;
+    gap: 2.5rem; margin-bottom: 3rem; align-items: start;
+  }
+  .profile-photo {
+    width: 100%; border-radius: 14px;
+    box-shadow: var(--card-shadow);
+    aspect-ratio: 3/4; object-fit: cover;
+  }
+  .profile-info h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem; margin-bottom: 0.25rem;
+  }
+  .profile-info .role {
+    color: var(--muted); font-size: 0.95rem; margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+  .profile-info .philosophy {
+    background: var(--warm); border-left: 3px solid var(--accent);
+    padding: 1.25rem 1.5rem; border-radius: 0 10px 10px 0;
+    font-size: 0.95rem; line-height: 1.6;
+  }
+
+  /* Section blocks */
+  .block {
+    margin-bottom: 2.5rem;
+    animation: fadeUp 0.5s ease both;
+  }
+  .block-label {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.6rem;
+  }
+  .block h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem; margin-bottom: 0.75rem;
+  }
+
+  /* Card grid */
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem;
+    transition: all 0.2s;
+  }
+  .card:hover { box-shadow: var(--card-shadow); transform: translateY(-1px); }
+  .card-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .card-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.3rem; }
+  .card-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.55; }
+
+  /* Info list */
+  .info-list { list-style: none; }
+  .info-list li {
+    padding: 0.6rem 0; border-bottom: 1px solid var(--border);
+    display: flex; gap: 0.75rem; align-items: baseline;
+    font-size: 0.92rem;
+  }
+  .info-list li:last-child { border-bottom: none; }
+  .info-list .label {
+    font-weight: 600; min-width: 140px; color: var(--ink);
+    flex-shrink: 0;
+  }
+  .info-list .value { color: var(--muted); }
+
+  /* Photo row */
+  .photo-row {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem; margin: 1.5rem 0;
+  }
+  .photo-row img {
+    width: 100%; border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    object-fit: cover; aspect-ratio: 4/3;
+  }
+
+  /* Highlight card */
+  .highlight-card {
+    background: var(--ink); color: #fff;
+    border-radius: 14px; padding: 2rem;
+    position: relative; overflow: hidden;
+  }
+  .highlight-card::before {
+    content: ''; position: absolute; top: -30%; right: -15%;
+    width: 300px; height: 300px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(192,57,43,0.15), transparent 70%);
+  }
+  .highlight-card .hl-label {
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--accent-soft); margin-bottom: 0.5rem;
+  }
+  .highlight-card .hl-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem; line-height: 1.5;
+    position: relative; z-index: 1;
+  }
+
+  /* Fun facts grid */
+  .fun-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .fun-item {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.25rem;
+  }
+  .fun-item .emoji { font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .fun-item .fun-label {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.25rem;
+  }
+  .fun-item .fun-text { font-size: 0.9rem; color: var(--ink); line-height: 1.5; }
+  .fun-item a { color: var(--accent); text-decoration: none; }
+  .fun-item a:hover { text-decoration: underline; }
+
+  /* Nav pagination */
+  .page-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 3rem; padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  .page-nav a {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.65rem 1.25rem; border-radius: 8px;
+    font-size: 0.88rem; font-weight: 600;
+    text-decoration: none; color: var(--ink);
+    background: var(--warm); border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .page-nav a:hover { background: #eee8db; transform: translateY(-1px); }
+  .page-nav .active {
+    background: var(--accent); color: #fff; border-color: var(--accent);
+  }
+  .page-nav .active:hover { background: var(--accent-soft); }
+
+  /* ── FOOTER ── */
+  .footer {
+    max-width: 960px; margin: 0 auto;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .footer-bottom {
+    font-size: 0.75rem; color: var(--muted);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .footer-bottom a { color: var(--muted); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--ink); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--paper); border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem; gap: 1rem;
+    }
+    .profile-hero { grid-template-columns: 1fr; }
+    .profile-photo { max-width: 260px; }
+    .photo-row { grid-template-columns: 1fr; }
+    .fun-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">Henry Lee<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/1-2-1/biography.html" style="color:var(--ink)">Bio</a>
+      <a href="/1-2-1/gains-profile.html">GAINS</a>
+      <a href="/1-2-1/contact-sphere.html">Contact Sphere</a>
+      <a href="/1-2-1/previous-10.html">Previous 10</a>
+      <a href="https://wa.me/60126123540?text=Hi%20Henry%2C%20I%27d%20like%20to%20book%20a%20BNI%201-2-1!" class="nav-cta">Book 1-2-1</a>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="breadcrumb"><a href="/">Home</a> → Worksheets → Biography Sheet</div>
+  <h1>Biography Sheet</h1>
+  <p class="page-sub">Get to know Henry before our 1-2-1 — background, philosophy, and what drives me.</p>
+</header>
+
+<main class="content">
+
+  <!-- Profile Hero -->
+  <div class="profile-hero reveal">
+    <img src="/img/henry-profile.jpg" alt="Henry Lee — Insurance Advisor" class="profile-photo">
+    <div class="profile-info">
+      <h2>Henry Lee | 李茂源</h2>
+      <p class="role">General Insurance Advisor<br>BNI Extreme Chapter · Tokio Marine · Allianz General<br>8× MDRT Qualifier (2018–2026) · Based in Malacca · Serving Nationwide</p>
+      <div class="philosophy">
+        <strong>My philosophy:</strong> Insurance should be structured, not sold. My role is to bring clarity where others bring confusion — helping people and businesses protect what truly matters with properly designed general insurance.
+      </div>
+    </div>
+  </div>
+
+  <!-- Business Info -->
+  <div class="block reveal">
+    <div class="block-label">Business Information</div>
+    <h3>The Practice</h3>
+    <ul class="info-list">
+      <li><span class="label">Company</span><span class="value">Lee Mou Yen</span></li>
+      <li><span class="label">BNI Classification</span><span class="value">General Insurance</span></li>
+      <li><span class="label">Practising Since</span><span class="value">2017</span></li>
+    </ul>
+  </div>
+
+  <!-- Background -->
+  <div class="block reveal">
+    <div class="block-label">Background</div>
+    <h3>Where I Come From</h3>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🏦</div>
+        <div class="card-title">Asset Management</div>
+        <div class="card-desc">Formerly with Maybank Investment, managing RM1.5B AUM before transitioning into insurance advisory.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        <div class="card-title">Education</div>
+        <div class="card-desc">Educated in Malaysia, UK, and Taiwan. Over 90% full scholarship recipient.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">👨‍👩‍👦</div>
+        <div class="card-title">Insurance Family</div>
+        <div class="card-desc">Raised in the industry — both parents are top performers in insurance.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photos -->
+  <div class="photo-row reveal">
+    <div>
+      <img src="/img/henry-internship.jpg" alt="Henry Lee at Bloomberg terminal" style="width:100%; border-radius:12px; box-shadow:var(--card-shadow); object-fit:cover; aspect-ratio:4/3;">
+      <p style="font-size:0.78rem; color:var(--muted); margin-top:0.5rem; text-align:center;">Managing RM1.5B in institutional funds at Maybank Investment</p>
+    </div>
+    <div>
+      <img src="/img/henry-sharing.jpg" alt="Henry Lee sharing at industry event" style="width:100%; border-radius:12px; box-shadow:var(--card-shadow); object-fit:cover; aspect-ratio:4/3;">
+      <p style="font-size:0.78rem; color:var(--muted); margin-top:0.5rem; text-align:center;">Sharing at an industry knowledge session</p>
+    </div>
+  </div>
+
+  <!-- Fun Facts -->
+  <div class="block reveal">
+    <div class="block-label">Get to Know Me</div>
+    <h3>Beyond Insurance</h3>
+    <div class="fun-grid">
+      <div class="fun-item">
+        <div class="emoji">🏸</div>
+        <div class="fun-label">Hobbies</div>
+        <div class="fun-text">Travel, badminton, and psychology</div>
+      </div>
+      <div class="fun-item">
+        <div class="emoji">💍</div>
+        <div class="fun-label">Partner</div>
+        <div class="fun-text">Jessey Mak — Estate Planner</div>
+      </div>
+      <div class="fun-item">
+        <div class="emoji">🐕</div>
+        <div class="fun-label">Fur Family</div>
+        <div class="fun-text">Five dogs at home — <a href="https://www.instagram.com/happy__lucky0317/" target="_blank">@happy__lucky0317</a></div>
+      </div>
+      <div class="fun-item">
+        <div class="emoji">🤫</div>
+        <div class="fun-label">Something No One Knows About Me</div>
+        <div class="fun-text">I once considered becoming a psychologist — until I realised the human mind and financial planning aren't all that different.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dogs photo -->
+  <div class="block reveal" style="margin-top: -1rem;">
+    <img src="/img/henry-family.jpg" alt="Henry & Jessey" style="width:100%; border-radius:12px; box-shadow:var(--card-shadow); max-height: 400px; object-fit: cover;">
+  </div>
+
+  <!-- Burning Desire & Key to Success -->
+  <div class="card-grid reveal" style="margin-bottom: 2.5rem;">
+    <div class="highlight-card">
+      <div class="hl-label">🔥 My Burning Desire</div>
+      <div class="hl-text">To build a top-performing agency that not only protects clients but creates meaningful careers for the next generation of advisors.</div>
+    </div>
+    <div class="highlight-card">
+      <div class="hl-label">🗝️ My Key to Success</div>
+      <div class="hl-text">Clarity. In decision-making, in communication, and in the way I advise my clients. When things become clear, decisions become easy.</div>
+    </div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="/">← Back to Home</a>
+    <a href="/1-2-1/gains-profile.html" class="active">Next: GAINS Profile →</a>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <span>© Lee Mou Yen (MA0244914-H) · <a href="/privacy-policy.html">Privacy Policy</a></span>
+    
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

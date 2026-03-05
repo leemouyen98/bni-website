@@ -1,0 +1,6 @@
+/img/*
+  Access-Control-Allow-Origin: *
+
+/henry-lee.vcf
+  Content-Type: text/vcard
+  Content-Disposition: attachment; filename="Henry Lee.vcf"

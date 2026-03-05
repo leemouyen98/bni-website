@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Previous 10 Customers — Henry Lee | MDRT Advisor</title>
+<meta name="description" content="Henry Lee's previous 10 customers — real businesses, real coverage, real referral sources.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e; --paper: #faf9f6; --accent: #c0392b; --accent-soft: #e74c3c;
+    --warm: #f5f0e8; --muted: #6b7280; --border: #e5e1d8;
+    --green-bg: #e8f5e9; --green-text: #2e7d32;
+    --blue-bg: #e3f2fd; --blue-text: #1565c0;
+    --amber-bg: #fff8e1; --amber-text: #f57f17;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,249,246,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+  .nav-inner { max-width: 960px; margin: 0 auto; padding: 0.85rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+  .nav-brand { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+  .nav-brand span { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.75rem; align-items: center; }
+  .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta { background: var(--accent) !important; color: #fff !important; padding: 0.5rem 1.1rem !important; border-radius: 6px; font-weight: 600 !important; font-size: 0.82rem !important; }
+  .nav-cta:hover { background: var(--accent-soft) !important; }
+  .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; width: 28px; height: 20px; flex-direction: column; justify-content: space-between; }
+  .mobile-menu-btn span { display: block; width: 100%; height: 2px; background: var(--ink); border-radius: 2px; }
+
+  .page-header { padding: 7.5rem 1.5rem 2rem; max-width: 960px; margin: 0 auto; }
+  .breadcrumb { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.75rem; }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .page-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem,4.5vw,2.8rem); line-height: 1.15; }
+  .page-sub { font-size: 1rem; color: var(--muted); margin-top: 0.5rem; max-width: 580px; }
+
+  .content { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  .block { margin-bottom: 2.5rem; }
+  .block-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.6rem; }
+  .block h3 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; margin-bottom: 0.75rem; }
+
+  /* Customer cards */
+  .customer-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .customer-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.25rem 1.5rem;
+    display: grid; grid-template-columns: 40px 1fr auto;
+    gap: 1rem; align-items: start;
+    transition: all 0.2s;
+  }
+  .customer-card:hover { box-shadow: var(--card-shadow); transform: translateY(-1px); }
+  .cust-num {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--warm); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.85rem; color: var(--ink);
+    flex-shrink: 0;
+  }
+  .cust-info { min-width: 0; }
+  .cust-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.15rem; }
+  .cust-type { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.4rem; }
+  .cust-coverage {
+    display: flex; flex-wrap: wrap; gap: 0.35rem;
+  }
+  .cov-tag {
+    display: inline-block; padding: 0.2rem 0.55rem;
+    border-radius: 100px; font-size: 0.72rem; font-weight: 600;
+    background: var(--green-bg); color: var(--green-text);
+  }
+  .cust-source {
+    font-size: 0.78rem; color: var(--muted); white-space: nowrap;
+    text-align: right;
+    display: flex; align-items: center; gap: 0.3rem;
+  }
+  .cust-source .src-icon { font-size: 0.9rem; }
+
+  /* Pattern cards */
+  .pattern-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .pattern-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem;
+  }
+  .pattern-card h4 {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; margin-bottom: 0.6rem;
+  }
+  .pattern-card.common h4 { color: var(--blue-text); }
+  .pattern-card.opp h4 { color: var(--green-text); }
+  .pattern-list { list-style: none; }
+  .pattern-list li {
+    font-size: 0.88rem; padding: 0.35rem 0;
+    display: flex; align-items: baseline; gap: 0.5rem;
+  }
+  .pattern-list li::before { content: '→'; color: var(--accent); font-weight: 700; }
+
+  /* Summary banner */
+  .summary-banner {
+    background: var(--ink); color: #fff;
+    border-radius: 14px; padding: 2rem;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem; text-align: center;
+    position: relative; overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  .summary-banner::before {
+    content: ''; position: absolute; top: -40%; left: -10%;
+    width: 350px; height: 350px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(192,57,43,0.15), transparent 70%);
+  }
+  .sb-stat { position: relative; z-index: 1; }
+  .sb-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem; line-height: 1; margin-bottom: 0.25rem;
+  }
+  .sb-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); }
+
+  .page-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);
+  }
+  .page-nav a {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.65rem 1.25rem; border-radius: 8px;
+    font-size: 0.88rem; font-weight: 600; text-decoration: none; color: var(--ink);
+    background: var(--warm); border: 1px solid var(--border); transition: all 0.2s;
+  }
+  .page-nav a:hover { background: #eee8db; transform: translateY(-1px); }
+  .page-nav .active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .page-nav .active:hover { background: var(--accent-soft); }
+
+  .footer { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; border-top: 1px solid var(--border); }
+  .footer-bottom { font-size: 0.75rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+  .footer-bottom a { color: var(--muted); text-decoration: none; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; gap: 1rem; }
+    .customer-card { grid-template-columns: 36px 1fr; }
+    .cust-source { grid-column: 2; text-align: left; margin-top: -0.25rem; }
+    .pattern-grid { grid-template-columns: 1fr; }
+    .summary-banner { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">Henry Lee<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/1-2-1/biography.html">Bio</a>
+      <a href="/1-2-1/gains-profile.html">GAINS</a>
+      <a href="/1-2-1/contact-sphere.html">Contact Sphere</a>
+      <a href="/1-2-1/previous-10.html" style="color:var(--ink)">Previous 10</a>
+      <a href="https://wa.me/60126123540?text=Hi%20Henry%2C%20I%27d%20like%20to%20book%20a%20BNI%201-2-1!" class="nav-cta">Book 1-2-1</a>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="breadcrumb"><a href="/">Home</a> → Worksheets → Previous 10 Customers</div>
+  <h1>Previous 10 Customers</h1>
+  <p class="page-sub">Real businesses, real coverage, real referral sources — so you can see exactly who I help and how referrals typically come in.</p>
+</header>
+
+<main class="content">
+
+  <!-- Summary stats -->
+  <div class="summary-banner reveal">
+    <div class="sb-stat">
+      <div class="sb-num">10</div>
+      <div class="sb-label">Recent Clients</div>
+    </div>
+    <div class="sb-stat">
+      <div class="sb-num">9</div>
+      <div class="sb-label">Business Clients</div>
+    </div>
+    <div class="sb-stat">
+      <div class="sb-num">100%</div>
+      <div class="sb-label">Referred or Repeat</div>
+    </div>
+    <div class="sb-stat">
+      <div class="sb-num">6+</div>
+      <div class="sb-label">Coverage Types</div>
+    </div>
+  </div>
+
+  <!-- Customer list -->
+  <div class="block reveal">
+    <div class="block-label">Recent Client History</div>
+    <h3>The Last 10</h3>
+    <div class="customer-list">
+
+      <div class="customer-card">
+        <div class="cust-num">1</div>
+        <div class="cust-info">
+          <div class="cust-name">Boingtech Malaysia</div>
+          <div class="cust-type">Multinational Manufacturer</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">All-Risks</span>
+            <span class="cov-tag">Marine Cargo</span>
+            <span class="cov-tag">Group Medical</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">🧾</span> Accountant</div>
+      </div>
+
+      <div class="customer-card">
+        <div class="cust-num">2</div>
+        <div class="cust-info">
+          <div class="cust-name">KK Team Electrical</div>
+          <div class="cust-type">Electrical Contractor</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">Contractor's All Risks (CAR)</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">👨‍👩‍👦</span> Family</div>
+      </div>
+
+      <div class="customer-card">
+        <div class="cust-num">3</div>
+        <div class="cust-info">
+          <div class="cust-name">Combi Master Drives</div>
+          <div class="cust-type">Electrical Trading Company</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">Business Insurance</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">🤝</span> Existing Client</div>
+      </div>
+
+      <div class="customer-card">
+        <div class="cust-num">4</div>
+        <div class="cust-info">
+          <div class="cust-name">Teh Fruits</div>
+          <div class="cust-type">Fruit Wholesaler</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">Business Insurance</span>
+            <span class="cov-tag">Motor</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">🤝</span> Existing Client</div>
+      </div>
+
+      <div class="customer-card">
+        <div class="cust-num">5</div>
+        <div class="cust-info">
+          <div class="cust-name">Restoran Tong Sheng</div>
+          <div class="cust-type">Popular Seafood Restaurant</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">Business Insurance</span>
+            <span class="cov-tag">Public Liability</span>
+            <span class="cov-tag">Motor</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">🤝</span> Existing Client</div>
+      </div>
+
+      <div class="customer-card">
+        <div class="cust-num">6</div>
+        <div class="cust-info">
+          <div class="cust-name">Restoran Lee Swee Meng</div>
+          <div class="cust-type">Popular Chinese Restaurant</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">Business Insurance</span>
+            <span class="cov-tag">Public Liability</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">🤝</span> Existing Client</div>
+      </div>
+
+      <div class="customer-card">
+        <div class="cust-num">7</div>
+        <div class="cust-info">
+          <div class="cust-name">MK Lim Motor Workshop</div>
+          <div class="cust-type">PIAM-Approved Motor Workshop</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">Fire Insurance</span>
+            <span class="cov-tag">Equipment</span>
+            <span class="cov-tag">PA</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">🔗</span> BNI Member</div>
+      </div>
+
+      <div class="customer-card">
+        <div class="cust-num">8</div>
+        <div class="cust-info">
+          <div class="cust-name">Kedai Membuat Roti Hwa Aik</div>
+          <div class="cust-type">Bakery Factory</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">Fire Insurance</span>
+            <span class="cov-tag">Stock-in-Transit</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">👋</span> Friend</div>
+      </div>
+
+      <div class="customer-card">
+        <div class="cust-num">9</div>
+        <div class="cust-info">
+          <div class="cust-name">MCKILP Development Sdn Bhd</div>
+          <div class="cust-type">Developer Company</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">Corporate Solutions</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">👨‍👩‍👦</span> Family</div>
+      </div>
+
+      <div class="customer-card">
+        <div class="cust-num">10</div>
+        <div class="cust-info">
+          <div class="cust-name">Dato Seri Chan</div>
+          <div class="cust-type">Frequent Traveller</div>
+          <div class="cust-coverage">
+            <span class="cov-tag">Annual Travel Insurance</span>
+          </div>
+        </div>
+        <div class="cust-source"><span class="src-icon">🤝</span> Existing Client</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Patterns -->
+  <div class="block reveal">
+    <div class="pattern-grid">
+      <div class="pattern-card common">
+        <h4>🔍 Common Patterns</h4>
+        <ul class="pattern-list">
+          <li>Asset-heavy businesses</li>
+          <li>RM500K+ revenue</li>
+          <li>Want clarity and quick claim support</li>
+          <li>Often referred by other professionals</li>
+        </ul>
+      </div>
+      <div class="pattern-card opp">
+        <h4>🎯 High-Opportunity Segments</h4>
+        <ul class="pattern-list">
+          <li>Import / export businesses</li>
+          <li>Warehousing & logistics</li>
+          <li>Clinics & professional offices</li>
+          <li>Contractors & renovation teams</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-nav">
+    <a href="/1-2-1/contact-sphere.html">← Contact Sphere</a>
+    <a href="/" class="active">Back to Home →</a>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <span>© Lee Mou Yen (MA0244914-H) · <a href="/privacy-policy.html">Privacy Policy</a></span>
+    
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
